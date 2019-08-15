@@ -13,9 +13,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f99f99a7-db22-436c-9c3b-e752b1776730" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MavlinkBoost.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MavlinkBoost.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MavlinkBoost.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/MavlinkBoost.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavlink/include/mavlink/v2.0/common/common.h" beforeDir="false" afterPath="$PROJECT_DIR$/mavlink/include/mavlink/v2.0/common/common.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1565856971328</updated>
       <workItem from="1565856972945" duration="1898000" />
-      <workItem from="1565861113397" duration="5902000" />
+      <workItem from="1565861113397" duration="6365000" />
     </task>
     <servers />
   </component>

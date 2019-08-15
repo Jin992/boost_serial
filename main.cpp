@@ -6,8 +6,7 @@
 #include <thread>
 #include <condition_variable>
 #include "mavlink/include/mavlink/v2.0/common/mavlink.h"
-#define SERIAL_BUF_SIZE 128
-#define LEFTOVERS_BUF_SIZE 512
+#define SERIAL_BUF_SIZE 12
 
 typedef std::queue<std::pair<int8_t *, std::size_t>> mav_queue_t;
 
@@ -35,39 +34,13 @@ private:
 
     void _handler(const boost::system::error_code &error, uint bytes_transferred) {
         bool success = false;
-        std::cout << "Readed " << bytes_transferred << " bytes" << std::endl;
-        for (int i = 0; i < bytes_transferred; i++){
+        for (std::size_t i = 0; i < bytes_transferred; i++){
             mavlink_message_t msg;
             mavlink_status_t status;
             success = mavlink_parse_char(MAVLINK_COMM_0, _buffer[i], &msg, &status);
             if (success)
                 std::cout << "Got packet " << msg.msgid << std::endl;
         }
-        /*mavlink_message_t msg;
-        mavlink_status_t status;
-        uint8_t tmp_buf[512];
-
-        for (std::size_t i = 0; i < bytes_transferred; i++) {
-            if (_leftovers_len > 0) {
-                for (std::size_t j = 0; j < _leftovers_len; j++) {
-                    success = mavlink_parse_char(MAVLINK_COMM_0, _leftovers[j], &msg, &status);
-                    if (success)
-                }
-
-            }
-            success = mavlink_parse_char(MAVLINK_COMM_0, _buffer[i], &msg, &status);
-            if (success){
-                uint32_t packet_len = mavlink_msg_to_send_buffer(tmp_buf, &msg);
-                int8_t *tmp_storage = new int8_t[packet_len];
-                memcpy(tmp_storage, tmp_buf, packet_len);
-                {
-                    std::lock_guard<std::mutex> lock(storage_mutex);
-                    storage.push({tmp_storage, packet_len});
-                    cond.notify_one();
-                }
-                break;
-            }
-        }*/
         read_some();
     }
 
@@ -79,8 +52,6 @@ private:
     boost::asio::io_service     _io;
     boost::asio::serial_port    _serial;
     char                        _buffer[SERIAL_BUF_SIZE];
-    char                        _leftovers[LEFTOVERS_BUF_SIZE];
-    uint32_t                    _leftovers_len;
 };
 
 
