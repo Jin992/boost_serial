@@ -118,7 +118,7 @@ private:
         std::cout << "write hdl" << std::endl;
         std::shared_ptr<std::string> send_buf = std::make_shared<std::string>(_magic);
         send_buf->append((char *)buf.first, buf.second);
-        delete [] buf.first;
+        //delete [] buf.first;
         _socket.async_send_to(boost::asio::buffer(send_buf->data(), send_buf->size()), _remote_endpoint,
                               [&](const boost::system::error_code& error, std::size_t bytes_transferred){
                                   _write_udp_hdl(error, bytes_transferred, send_buf);});
