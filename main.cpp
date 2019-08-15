@@ -61,7 +61,7 @@ public:
         _magic = make_magic_key("Radion");
         _read_serial();
         _read_udp();
-        boost::thread t(boost::bind(&boost::asio::io_service::run, &_io));
+        std::thread t([this](){ _io.run();});
         if (t.joinable())
             t.join();
     }
