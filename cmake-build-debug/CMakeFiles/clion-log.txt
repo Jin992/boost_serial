@@ -1,0 +1,9 @@
+/opt/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/jin/CLionProjects/MavlinkBoost
+-- Boost version: 1.69.0
+-- Found the following Boost libraries:
+--   system
+--   regex
+--   filesystem
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jin/CLionProjects/MavlinkBoost/cmake-build-debug
