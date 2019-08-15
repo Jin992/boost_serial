@@ -8,8 +8,10 @@
 #include "mavlink/include/mavlink/v2.0/common/mavlink.h"
 #include <boost/array.hpp>
 #include <openssl/md5.h>
+#include <boost/thread/thread.hpp>
+#include <boost/bind.hpp>
 
-#define SERIAL_BUF_SIZE 12
+#define SERIAL_BUF_SIZE 128
 
 
 typedef std::pair<uint8_t *, std::size_t>                mav_buf_t;
@@ -59,7 +61,9 @@ public:
         _magic = make_magic_key("Radion");
         _read_serial();
         _read_udp();
-        _io.run();
+        boost::thread t(boost::bind(&boost::asio::io_service::run, &_io));
+        if (t.joinable())
+            t.join();
     }
 
 private:
@@ -148,5 +152,6 @@ private:
 
 int main() {
     MavProxy uart("/dev/ttyS0", 115200);
+    std::cout << "Finish" << std::endl;
     return 0;
 }
