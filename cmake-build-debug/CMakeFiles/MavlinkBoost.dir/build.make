@@ -82,6 +82,7 @@ MavlinkBoost: CMakeFiles/MavlinkBoost.dir/build.make
 MavlinkBoost: /usr/lib/libboost_system.so
 MavlinkBoost: /usr/lib/libboost_regex.so
 MavlinkBoost: /usr/lib/libboost_filesystem.so
+MavlinkBoost: /usr/lib/libcrypto.so
 MavlinkBoost: CMakeFiles/MavlinkBoost.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jin/CLionProjects/MavlinkBoost/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable MavlinkBoost"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MavlinkBoost.dir/link.txt --verbose=$(VERBOSE)

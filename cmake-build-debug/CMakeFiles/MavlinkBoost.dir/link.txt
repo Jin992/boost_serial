@@ -1,1 +1,1 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/MavlinkBoost.dir/main.cpp.o  -o MavlinkBoost -lboost_system -lboost_regex -lboost_filesystem -pthread 
+/usr/bin/c++  -g  -rdynamic CMakeFiles/MavlinkBoost.dir/main.cpp.o  -o MavlinkBoost -lboost_system -lboost_regex -lboost_filesystem /usr/lib/libcrypto.so -pthread 
