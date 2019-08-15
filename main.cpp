@@ -36,6 +36,13 @@ private:
     void _handler(const boost::system::error_code &error, uint bytes_transferred) {
         bool success = false;
         std::cout << "Readed " << bytes_transferred << " bytes" << std::endl;
+        for (int i = 0; i < bytes_transferred; i++){
+            mavlink_message_t msg;
+            mavlink_status_t status;
+            success = mavlink_parse_char(MAVLINK_COMM_0, _buffer[i], &msg, &status);
+            if (success)
+                std::cout << "Got packet " << msg.msgid << std::endl;
+        }
         /*mavlink_message_t msg;
         mavlink_status_t status;
         uint8_t tmp_buf[512];
