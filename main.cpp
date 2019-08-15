@@ -99,14 +99,12 @@ private:
 
     void _read_serial_handler(const boost::system::error_code &error, uint bytes_transferred) {
         std::cout << "read serial hdl" << std::endl;
-        mavlink_message_t msg;
         mavlink_status_t status;
         bool state = true;
         for (std::size_t i = 0; i < bytes_transferred; i++){
-            if (mavlink_parse_char(MAVLINK_COMM_0, _buffer[i], &msg, &status)) {
+            if (mavlink_parse_char(MAVLINK_COMM_0, _buffer[i], &_msg, &status)) {
                 uint8_t *data;
-                uint32_t data_size = generate_mavlink_binary(&data, msg);
-                _write_udp({data, data_size});
+                _write_udp();
                 state = false;
             }
         }
@@ -114,11 +112,12 @@ private:
             _read_serial();
     }
 
-    void _write_udp(mav_buf_t buf) {
+    void _write_udp() {
         std::cout << "write hdl" << std::endl;
+        char tmp[512];
+        uint32_t data_size = mavlink_msg_to_send_buffer((uint8_t *)tmp, &_msg);
         std::shared_ptr<std::string> send_buf = std::make_shared<std::string>(_magic);
-        send_buf->append((char *)buf.first, buf.second);
-        //delete [] buf.first;
+        send_buf->append(tmp, data_size);
         _socket.async_send_to(boost::asio::buffer(send_buf->data(), send_buf->size()), _remote_endpoint,
                               [&](const boost::system::error_code& error, std::size_t bytes_transferred){
                                   _write_udp_hdl(error, bytes_transferred, send_buf);});
@@ -140,6 +139,7 @@ private:
     char                            _buffer[SERIAL_BUF_SIZE];
     std::string                     _magic;
     boost::array<int8_t, 1024>      _buf_in;
+    mavlink_message_t               _msg;
 
 };
 
