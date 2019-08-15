@@ -46,14 +46,16 @@ public:
         _serial.set_option( boost::asio::serial_port_base::character_size( 8 ) );
         _serial.set_option( boost::asio::serial_port_base::stop_bits() );	// default one
         _serial.set_option( boost::asio::serial_port_base::baud_rate( baud_rate ) );
-
+        std::cout << "Serial is on" << std::endl;
         boost::asio::ip::udp::resolver resolver(_io);                                                                           /// initialize resolver
         boost::asio::ip::udp::resolver::query query(boost::asio::ip::udp::v4(), "192.168.0.135", "25090");           /// setup protocol + ip + port query for resolver
-        _remote_endpoint = *resolver.resolve(query);                                                                               /// initialize endpoint with address resolver
+        _remote_endpoint = *resolver.resolve(query);/// initialize endpoint with address resolver
+        _socket = boost::asio::ip::udp::socket(_io);
         _socket.open(boost::asio::ip::udp::v4());
         if (!_socket.is_open()) {
             throw "UdpControlStream: failed to open socket";                                                                       /// temporary exception stub
         }
+        std::cout << "Socket is on" << std::endl;
         _magic = make_magic_key("Radion");
         _read_serial();
         _read_udp();
@@ -65,7 +67,7 @@ private:
 
     void _read_udp() {
         boost::asio::ip::udp::endpoint r_ep;
-
+        std::cout << "red udp" << std::endl;
         _socket.async_receive_from(boost::asio::buffer(_buf_in), r_ep,
                 [&](const boost::system::error_code &error, uint bytes_transferred){
                                             _read_udp_hdl(error, bytes_transferred);
@@ -75,6 +77,7 @@ private:
     void _read_udp_hdl(const boost::system::error_code &error, uint bytes_transferred) {
         if(error)
             std::cout << error.message() << std::endl;
+        std::cout << "read udp hdl" << std::endl;
         _serial.async_write_some(boost::asio::buffer(_buf_in.data(),bytes_transferred),
                                  [&](const boost::system::error_code &error, std::size_t len){ _write_serial_hdl(error, len);});
     }
@@ -83,16 +86,19 @@ private:
     void _write_serial_hdl(const boost::system::error_code &error, uint bytes_transferred) {
         if (error)
             std::cout << error.message() << std::endl;
+        std::cout << "write serial hdl" << std::endl;
         _read_udp();
     }
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
     void _read_serial() {
+        std::cout << "read serial " << std::endl;
         _serial.async_read_some(boost::asio::buffer(_buffer, SERIAL_BUF_SIZE),
                                 [&](boost::system::error_code ec, std::size_t len){_read_serial_handler(ec, len);});
     }
 
     void _read_serial_handler(const boost::system::error_code &error, uint bytes_transferred) {
+        std::cout << "read serial hdl" << std::endl;
         mavlink_message_t msg;
         mavlink_status_t status;
         bool state = true;
@@ -109,6 +115,7 @@ private:
     }
 
     void _write_udp(mav_buf_t buf) {
+        std::cout << "write hdl" << std::endl;
         std::shared_ptr<std::string> send_buf = std::make_shared<std::string>(_magic);
         send_buf->append((char *)buf.first, buf.second);
         delete [] buf.first;
@@ -120,6 +127,7 @@ private:
     void _write_udp_hdl(const boost::system::error_code& error, std::size_t bytes_transferred, std::shared_ptr<std::string> ptr) {
         if (error)
             std::cout << error.message() << std::endl;
+        std::cout << "write udp hdl" << std::endl;
         _read_serial();
     }
 
