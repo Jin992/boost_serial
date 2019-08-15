@@ -11,7 +11,7 @@
 #include <boost/thread/thread.hpp>
 #include <boost/bind.hpp>
 
-#define SERIAL_BUF_SIZE 128
+#define SERIAL_BUF_SIZE 32768
 
 
 typedef std::pair<uint8_t *, std::size_t>                mav_buf_t;
@@ -107,19 +107,16 @@ private:
         bool state = true;
         for (std::size_t i = 0; i < bytes_transferred; i++){
             if (mavlink_parse_char(MAVLINK_COMM_0, _buffer[i], &_msg, &status)) {
-                uint8_t *data;
-                _write_udp();
-                state = false;
+                _write_udp(_msg);
             }
         }
-        if (state)
-            _read_serial();
+        _read_serial();
     }
 
-    void _write_udp() {
+    void _write_udp(mavlink_message_t msg) {
         std::cout << "write hdl" << std::endl;
         char tmp[512];
-        uint32_t data_size = mavlink_msg_to_send_buffer((uint8_t *)tmp, &_msg);
+        uint32_t data_size = mavlink_msg_to_send_buffer((uint8_t *)tmp, &msg);
         std::shared_ptr<std::string> send_buf = std::make_shared<std::string>(_magic);
         send_buf->append(tmp, data_size);
         _socket.async_send_to(boost::asio::buffer(send_buf->data(), send_buf->size()), _remote_endpoint,
@@ -131,7 +128,6 @@ private:
         if (error)
             std::cout << error.message() << std::endl;
         std::cout << "write udp hdl" << std::endl;
-        _read_serial();
     }
 
 
