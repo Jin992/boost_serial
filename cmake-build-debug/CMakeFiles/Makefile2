@@ -65,39 +65,39 @@ CMAKE_SOURCE_DIR = /home/jin/CLionProjects/MavlinkBoost
 CMAKE_BINARY_DIR = /home/jin/CLionProjects/MavlinkBoost/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/MavlinkBoost.dir
+# Target rules for target CMakeFiles/mboost.dir
 
 # All Build rule for target.
-CMakeFiles/MavlinkBoost.dir/all:
-	$(MAKE) -f CMakeFiles/MavlinkBoost.dir/build.make CMakeFiles/MavlinkBoost.dir/depend
-	$(MAKE) -f CMakeFiles/MavlinkBoost.dir/build.make CMakeFiles/MavlinkBoost.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jin/CLionProjects/MavlinkBoost/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target MavlinkBoost"
-.PHONY : CMakeFiles/MavlinkBoost.dir/all
+CMakeFiles/mboost.dir/all:
+	$(MAKE) -f CMakeFiles/mboost.dir/build.make CMakeFiles/mboost.dir/depend
+	$(MAKE) -f CMakeFiles/mboost.dir/build.make CMakeFiles/mboost.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jin/CLionProjects/MavlinkBoost/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target mboost"
+.PHONY : CMakeFiles/mboost.dir/all
 
 # Include target in all.
-all: CMakeFiles/MavlinkBoost.dir/all
+all: CMakeFiles/mboost.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/MavlinkBoost.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jin/CLionProjects/MavlinkBoost/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/MavlinkBoost.dir/all
+CMakeFiles/mboost.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jin/CLionProjects/MavlinkBoost/cmake-build-debug/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/mboost.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jin/CLionProjects/MavlinkBoost/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/MavlinkBoost.dir/rule
+.PHONY : CMakeFiles/mboost.dir/rule
 
 # Convenience name for target.
-MavlinkBoost: CMakeFiles/MavlinkBoost.dir/rule
+mboost: CMakeFiles/mboost.dir/rule
 
-.PHONY : MavlinkBoost
-
-# clean rule for target.
-CMakeFiles/MavlinkBoost.dir/clean:
-	$(MAKE) -f CMakeFiles/MavlinkBoost.dir/build.make CMakeFiles/MavlinkBoost.dir/clean
-.PHONY : CMakeFiles/MavlinkBoost.dir/clean
+.PHONY : mboost
 
 # clean rule for target.
-clean: CMakeFiles/MavlinkBoost.dir/clean
+CMakeFiles/mboost.dir/clean:
+	$(MAKE) -f CMakeFiles/mboost.dir/build.make CMakeFiles/mboost.dir/clean
+.PHONY : CMakeFiles/mboost.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/mboost.dir/clean
 
 .PHONY : clean
 

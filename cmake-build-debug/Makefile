@@ -111,17 +111,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MavlinkBoost
+# Target rules for targets named mboost
 
 # Build rule for target.
-MavlinkBoost: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 MavlinkBoost
-.PHONY : MavlinkBoost
+mboost: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mboost
+.PHONY : mboost
 
 # fast build rule for target.
-MavlinkBoost/fast:
-	$(MAKE) -f CMakeFiles/MavlinkBoost.dir/build.make CMakeFiles/MavlinkBoost.dir/build
-.PHONY : MavlinkBoost/fast
+mboost/fast:
+	$(MAKE) -f CMakeFiles/mboost.dir/build.make CMakeFiles/mboost.dir/build
+.PHONY : mboost/fast
+
+MavlinkParam.o: MavlinkParam.cpp.o
+
+.PHONY : MavlinkParam.o
+
+# target to build an object file
+MavlinkParam.cpp.o:
+	$(MAKE) -f CMakeFiles/mboost.dir/build.make CMakeFiles/mboost.dir/MavlinkParam.cpp.o
+.PHONY : MavlinkParam.cpp.o
+
+MavlinkParam.i: MavlinkParam.cpp.i
+
+.PHONY : MavlinkParam.i
+
+# target to preprocess a source file
+MavlinkParam.cpp.i:
+	$(MAKE) -f CMakeFiles/mboost.dir/build.make CMakeFiles/mboost.dir/MavlinkParam.cpp.i
+.PHONY : MavlinkParam.cpp.i
+
+MavlinkParam.s: MavlinkParam.cpp.s
+
+.PHONY : MavlinkParam.s
+
+# target to generate assembly for a file
+MavlinkParam.cpp.s:
+	$(MAKE) -f CMakeFiles/mboost.dir/build.make CMakeFiles/mboost.dir/MavlinkParam.cpp.s
+.PHONY : MavlinkParam.cpp.s
+
+Modem.o: Modem.cpp.o
+
+.PHONY : Modem.o
+
+# target to build an object file
+Modem.cpp.o:
+	$(MAKE) -f CMakeFiles/mboost.dir/build.make CMakeFiles/mboost.dir/Modem.cpp.o
+.PHONY : Modem.cpp.o
+
+Modem.i: Modem.cpp.i
+
+.PHONY : Modem.i
+
+# target to preprocess a source file
+Modem.cpp.i:
+	$(MAKE) -f CMakeFiles/mboost.dir/build.make CMakeFiles/mboost.dir/Modem.cpp.i
+.PHONY : Modem.cpp.i
+
+Modem.s: Modem.cpp.s
+
+.PHONY : Modem.s
+
+# target to generate assembly for a file
+Modem.cpp.s:
+	$(MAKE) -f CMakeFiles/mboost.dir/build.make CMakeFiles/mboost.dir/Modem.cpp.s
+.PHONY : Modem.cpp.s
 
 main.o: main.cpp.o
 
@@ -129,7 +183,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/MavlinkBoost.dir/build.make CMakeFiles/MavlinkBoost.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/mboost.dir/build.make CMakeFiles/mboost.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -138,7 +192,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/MavlinkBoost.dir/build.make CMakeFiles/MavlinkBoost.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/mboost.dir/build.make CMakeFiles/mboost.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -147,7 +201,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/MavlinkBoost.dir/build.make CMakeFiles/MavlinkBoost.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/mboost.dir/build.make CMakeFiles/mboost.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -157,8 +211,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... MavlinkBoost"
+	@echo "... mboost"
 	@echo "... edit_cache"
+	@echo "... MavlinkParam.o"
+	@echo "... MavlinkParam.i"
+	@echo "... MavlinkParam.s"
+	@echo "... Modem.o"
+	@echo "... Modem.i"
+	@echo "... Modem.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

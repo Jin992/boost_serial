@@ -27,7 +27,7 @@ extern "C" {
 #define MAVLINK_MESSAGE_CRCS {{10001, 209, 20, 20, 0, 0, 0}, {10002, 186, 41, 41, 0, 0, 0}, {10003, 4, 1, 1, 0, 0, 0}}
 #endif
 
-#include "periphery/autopilotUart/mavlink/include/mavlink/v2.0/protocol.h"
+#include "mavlink/include/mavlink/v2.0/protocol.h"
 
 #define MAVLINK_ENABLED_UAVIONIX
 
@@ -175,7 +175,7 @@ typedef enum UAVIONIX_ADSB_EMERGENCY_STATUS
 #include "./mavlink_msg_uavionix_adsb_transceiver_health_report.h"
 
 // base include
-#include "periphery/autopilotUart/mavlink/include/mavlink/v2.0/common/common.h"
+#include "mavlink/include/mavlink/v2.0/common/common.h"
 
 #undef MAVLINK_THIS_XML_IDX
 #define MAVLINK_THIS_XML_IDX 2

@@ -2,18 +2,30 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="MavlinkBoost" targetName="MavlinkBoost" />
+      <config projectName="MavlinkBoost" targetName="mboost" />
     </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Remote" CONFIG_NAME="Debug" TOOLCHAIN_NAME="Remote Host" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99f99a7-db22-436c-9c3b-e752b1776730" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/MavlinkBoost.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/MavlinkBoost.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavlink/include/mavlink/v2.0/ardupilotmega/ardupilotmega.h" beforeDir="false" afterPath="$PROJECT_DIR$/mavlink/include/mavlink/v2.0/ardupilotmega/ardupilotmega.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavlink/include/mavlink/v2.0/icarous/icarous.h" beforeDir="false" afterPath="$PROJECT_DIR$/mavlink/include/mavlink/v2.0/icarous/icarous.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavlink/include/mavlink/v2.0/uAvionix/uAvionix.h" beforeDir="false" afterPath="$PROJECT_DIR$/mavlink/include/mavlink/v2.0/uAvionix/uAvionix.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +36,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Remote" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -36,6 +48,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -55,7 +69,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="MavlinkBoost" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MavlinkBoost" TARGET_NAME="MavlinkBoost" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="MavlinkBoost" RUN_TARGET_NAME="MavlinkBoost">
+    <configuration name="mboost" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MavlinkBoost" TARGET_NAME="mboost" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="MavlinkBoost" RUN_TARGET_NAME="mboost">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -72,7 +86,9 @@
       <option name="presentableId" value="Default" />
       <updated>1565856971328</updated>
       <workItem from="1565856972945" duration="1898000" />
-      <workItem from="1565861113397" duration="22700000" />
+      <workItem from="1565861113397" duration="24799000" />
+      <workItem from="1565940784469" duration="146000" />
+      <workItem from="1565940951907" duration="22918000" />
     </task>
     <servers />
   </component>
@@ -84,7 +100,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

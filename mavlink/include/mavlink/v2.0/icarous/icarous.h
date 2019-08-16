@@ -27,7 +27,7 @@ extern "C" {
 #define MAVLINK_MESSAGE_CRCS {{42000, 227, 1, 1, 0, 0, 0}, {42001, 239, 46, 46, 0, 0, 0}}
 #endif
 
-#include "periphery/autopilotUart/mavlink/include/mavlink/v2.0/protocol.h"
+#include "mavlink/include/mavlink/v2.0/protocol.h"
 
 #define MAVLINK_ENABLED_ICAROUS
 
