@@ -84,10 +84,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/jin/CLionProjects/MavlinkBoost/MavlinkParam.cpp">
+		<Unit filename="/home/jin/CLionProjects/MavlinkBoost/MavProxy.cpp">
 			<Option target="mboost"/>
 		</Unit>
-		<Unit filename="/home/jin/CLionProjects/MavlinkBoost/MavlinkParam.h">
+		<Unit filename="/home/jin/CLionProjects/MavlinkBoost/MavProxy.h">
 			<Option target="mboost"/>
 		</Unit>
 		<Unit filename="/home/jin/CLionProjects/MavlinkBoost/Modem.cpp">

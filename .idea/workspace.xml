@@ -15,17 +15,15 @@
     <list default="true" id="f99f99a7-db22-436c-9c3b-e752b1776730" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MavlinkParam.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MavlinkParam.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modem.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modem.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/MavlinkBoost.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/MavlinkBoost.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-remote/MavlinkBoost.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-remote/MavlinkBoost.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-remote/mboost" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-remote/mboost" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavlink/include/mavlink/v2.0/ardupilotmega/ardupilotmega.h" beforeDir="false" afterPath="$PROJECT_DIR$/mavlink/include/mavlink/v2.0/ardupilotmega/ardupilotmega.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavlink/include/mavlink/v2.0/icarous/icarous.h" beforeDir="false" afterPath="$PROJECT_DIR$/mavlink/include/mavlink/v2.0/icarous/icarous.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavlink/include/mavlink/v2.0/uAvionix/uAvionix.h" beforeDir="false" afterPath="$PROJECT_DIR$/mavlink/include/mavlink/v2.0/uAvionix/uAvionix.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +86,17 @@
       <workItem from="1565856972945" duration="1898000" />
       <workItem from="1565861113397" duration="24799000" />
       <workItem from="1565940784469" duration="146000" />
-      <workItem from="1565940951907" duration="22918000" />
+      <workItem from="1565940951907" duration="29560000" />
+      <workItem from="1566199826280" duration="595000" />
+      <workItem from="1566474329111" duration="557000" />
+      <workItem from="1566477787276" duration="4771000" />
+      <workItem from="1566544864369" duration="2849000" />
+      <workItem from="1566555563019" duration="48000" />
+      <workItem from="1566556530482" duration="939000" />
+      <workItem from="1566561171982" duration="1150000" />
+      <workItem from="1566576726771" duration="839000" />
+      <workItem from="1566890134513" duration="1210000" />
+      <workItem from="1567064258356" duration="3724000" />
     </task>
     <servers />
   </component>

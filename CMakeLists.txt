@@ -7,5 +7,5 @@ find_package(OpenSSL REQUIRED)
 
 include_directories(${PROJECT_SOURCE_DIR})
 
-add_executable(mboost main.cpp MavlinkParam.cpp Modem.cpp)
+add_executable(mboost main.cpp MavProxy.cpp MavProxy.h)
 target_link_libraries(mboost ${Boost_LIBRARIES} OpenSSL::Crypto -pthread)

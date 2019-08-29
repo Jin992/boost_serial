@@ -123,32 +123,32 @@ mboost/fast:
 	$(MAKE) -f CMakeFiles/mboost.dir/build.make CMakeFiles/mboost.dir/build
 .PHONY : mboost/fast
 
-MavlinkParam.o: MavlinkParam.cpp.o
+MavProxy.o: MavProxy.cpp.o
 
-.PHONY : MavlinkParam.o
+.PHONY : MavProxy.o
 
 # target to build an object file
-MavlinkParam.cpp.o:
-	$(MAKE) -f CMakeFiles/mboost.dir/build.make CMakeFiles/mboost.dir/MavlinkParam.cpp.o
-.PHONY : MavlinkParam.cpp.o
+MavProxy.cpp.o:
+	$(MAKE) -f CMakeFiles/mboost.dir/build.make CMakeFiles/mboost.dir/MavProxy.cpp.o
+.PHONY : MavProxy.cpp.o
 
-MavlinkParam.i: MavlinkParam.cpp.i
+MavProxy.i: MavProxy.cpp.i
 
-.PHONY : MavlinkParam.i
+.PHONY : MavProxy.i
 
 # target to preprocess a source file
-MavlinkParam.cpp.i:
-	$(MAKE) -f CMakeFiles/mboost.dir/build.make CMakeFiles/mboost.dir/MavlinkParam.cpp.i
-.PHONY : MavlinkParam.cpp.i
+MavProxy.cpp.i:
+	$(MAKE) -f CMakeFiles/mboost.dir/build.make CMakeFiles/mboost.dir/MavProxy.cpp.i
+.PHONY : MavProxy.cpp.i
 
-MavlinkParam.s: MavlinkParam.cpp.s
+MavProxy.s: MavProxy.cpp.s
 
-.PHONY : MavlinkParam.s
+.PHONY : MavProxy.s
 
 # target to generate assembly for a file
-MavlinkParam.cpp.s:
-	$(MAKE) -f CMakeFiles/mboost.dir/build.make CMakeFiles/mboost.dir/MavlinkParam.cpp.s
-.PHONY : MavlinkParam.cpp.s
+MavProxy.cpp.s:
+	$(MAKE) -f CMakeFiles/mboost.dir/build.make CMakeFiles/mboost.dir/MavProxy.cpp.s
+.PHONY : MavProxy.cpp.s
 
 Modem.o: Modem.cpp.o
 
@@ -213,9 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... mboost"
 	@echo "... edit_cache"
-	@echo "... MavlinkParam.o"
-	@echo "... MavlinkParam.i"
-	@echo "... MavlinkParam.s"
+	@echo "... MavProxy.o"
+	@echo "... MavProxy.i"
+	@echo "... MavProxy.s"
 	@echo "... Modem.o"
 	@echo "... Modem.i"
 	@echo "... Modem.s"
