@@ -12,19 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f99f99a7-db22-436c-9c3b-e752b1776730" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MavlinkParam.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MavlinkParam.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modem.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modem.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/MavlinkBoost.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/MavlinkBoost.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-remote/MavlinkBoost.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-remote/MavlinkBoost.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-remote/mboost" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-remote/mboost" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="f99f99a7-db22-436c-9c3b-e752b1776730" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +84,7 @@
       <workItem from="1566561171982" duration="1150000" />
       <workItem from="1566576726771" duration="839000" />
       <workItem from="1566890134513" duration="1210000" />
-      <workItem from="1567064258356" duration="3724000" />
+      <workItem from="1567064258356" duration="3978000" />
     </task>
     <servers />
   </component>

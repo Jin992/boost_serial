@@ -1,3 +1,0 @@
-/home/jin/CLionProjects/MavlinkBoost/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/jin/CLionProjects/MavlinkBoost/cmake-build-debug/CMakeFiles/mboost.dir
-/home/jin/CLionProjects/MavlinkBoost/cmake-build-debug/CMakeFiles/edit_cache.dir
